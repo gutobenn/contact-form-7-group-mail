@@ -164,9 +164,4 @@ function wpcf7_group_mail_reconfigure(){
 }
 
 register_activation_hook( __FILE__, 'wpcf7_group_mail_reconfigure' );
-
-//aplica nos forms, coloca isso na instalação
-//a:2:{s:4:"mode";s:2:"cc";s:5:"roles";a:2:{i:0;s:6:"editor";i:1;s:11:"contributor";}}
-//reconfigura td, e tb executa isso na instalação do plugi, aplica isso nos forms existentes
-// na proxima versaoposso fazer de deletar opcoes antigas 
 ?>

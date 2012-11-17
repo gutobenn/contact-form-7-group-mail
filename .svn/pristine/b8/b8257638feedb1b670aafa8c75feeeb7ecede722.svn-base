@@ -163,9 +163,7 @@ function wpcf7_group_mail_reconfigure(){
 	}
 
 	delete_option("mode");
-}
-if( get_option("mode") ){ wpcf7_group_mail_reconfigure(); }
-
+}add_action('init','wpcf7_group_mail_reconfigure',1);
 
 //register_activation_hook( __FILE__, 'wpcf7_group_mail_reconfigure' );
 //add_action('update_plugin_complete_actions', 'wpcf7_group_mail_reconfigure');
