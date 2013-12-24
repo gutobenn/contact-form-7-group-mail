@@ -2,9 +2,9 @@
 Contributors: gutobenn, edpittol
 Donate link: http://www.u3b.com.br/donate
 Tags: contact, form, 7, mass, email, group, admin, subscriber, author, editor, contributor, custom roles, individual
-Requires at least: 3.0.1
-Tested up to: 3.4.2
-Stable tag: 1.1.5
+Requires at least: 3.6
+Tested up to: 3.8
+Stable tag: 1.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,11 @@ Allows you to send Contact Form 7 messages to any group (admins, editors, author
 
 == Description ==
 
-Contact Form 7 Group Mail allows you to send messages to multiple users, according to their groups. With this plugin you can choose which groups (admins, editors, authors, contributors, subscribers and custom roles) are going to receive the e-mails. The list of recipients is automatically updated, so you don't need to change the contact form every time a user is added or removed. Important: it is an extension for Contact Form 7 plugin.
+Contact Form 7 Group Mail allows you to send messages to multiple users, according to their groups. With this plugin you can choose who (admins, editors, authors, contributors, subscribers and custom roles) are going to receive the e-mails. 
+
+The list of recipients is automatically updated, so it's not needed to change the contact form every time a user is added or removed. 
+
+Important: it is an extension for Contact Form 7 plugin.
 
 == Installation ==
 
@@ -24,13 +28,13 @@ Contact Form 7 Group Mail allows you to send messages to multiple users, accordi
 
 = Is it possible to use different configurations for each form? =
 
-Yes! Individual configuration is available
+Yes! Individual configuration is available.
 
-= Can I send the messages to a group that I create? =
+= Can I send the messages to a group that I created? =
 
 Yes, it works with custom roles.
 
-= Does it send 'Cc' and 'Cco' e-mails? =
+= Does it send 'Cc' and 'Bcc' e-mails? =
 
 Yes. It's possible since version 0.9
 
@@ -44,6 +48,12 @@ This plugin was succesfully tested on 3.3.1, but it probably works with other ve
 2. Multiple usage: sending emails to users.
 
 == Changelog ==
+
+= 1.3 =
+* Fixed bugs in WP 3.8 and CF7 3.6
+
+= 1.1.7 =
+* Added translation support.
 
 = 1.1.5 =
 * Individual configuration available
@@ -62,6 +72,12 @@ This plugin was succesfully tested on 3.3.1, but it probably works with other ve
 * Lighter code.
 
 == Upgrade Notice ==
+
+= 1.1.7 =
+* Fixed bugs on WordPress 3.8 and Contact Form 7 3.6. Translation also.
+
+= 1.1.7 =
+* Plugin now allows translations. Portuguese available.
 
 = 1.1.5 =
 If you installed 1.1, please update! This version allows individual configuration. IMPORTANT: Global configuration isn't available anymore, so the active configuration will be set to all forms.
