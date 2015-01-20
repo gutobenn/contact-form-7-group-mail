@@ -40,7 +40,7 @@ Yes. It's possible since version 0.9
 
 = What version of Contact Form 7 I need? =
 
-This plugin was succesfully tested on 3.3.1, but it probably works with other versions.
+This plugin was succesfully tested on versions between 3.3.1 and 4.0.3, but it probably works with other versions.
 
 == Screenshots ==
 
