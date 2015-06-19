@@ -3,7 +3,7 @@
 Plugin Name: Contact Form 7 Group Mail
 Plugin URI: http://www.u3b.com.br/plugins/contact-form-7-group-mail
 Description: Send 'Contact Form 7' mails to all users of any group (admins, editors, authors, contributors, subscribers and custom roles).
-Version: 1.4
+Version: 1.5
 Author: Augusto Bennemann
 Author URI: http://www.u3b.com.br
 License: GPL2
@@ -76,21 +76,28 @@ function wpcf7gm_components( $components, $wpcf7 ) {
 add_filter( 'wpcf7_mail_components', 'wpcf7gm_components', 10, 2 );
 
 
-function wpcf7gm_add_box_metabox( $post_id ) {
-	
-	add_meta_box( 
-		'wpcf7gm_metabox', 
-		'Group Mail', 
-		'wpcf7gm_metabox',
-		null,
-		'additional_settings',
-		'low'
-    );
+/**
+ * Add panels in Contact Form 7 4.2+
+ *
+ * @param array $panels registered tabs in Form Editor
+ *
+ * @return array tabs with CF7GM added
+ */
+function wpcf7gm_editor_panels( $panels = array() ) {
+
+	if ( wpcf7_admin_has_edit_cap() ) {
+		$panels['cf7gm'] = array(
+			'title'    => __( 'Group Mail', 'contact-form-7-group-mail' ),
+			'callback' => 'wpcf7gm_metabox'
+		);
+	}
+
+	return $panels;
 }
-add_action( 'wpcf7_add_meta_boxes', 'wpcf7gm_add_box_metabox' );
+add_action( 'wpcf7_editor_panels', 'wpcf7gm_editor_panels' );
 
 
-function wpcf7gm_metabox( $post, $metabox ) {
+function wpcf7gm_metabox( $post ) {
 
 	$roles = wpcf7gm_get_roles();
 	$settings = get_post_meta( $post->id, 'wpcf7gm', true );
