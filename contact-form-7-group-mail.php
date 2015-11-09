@@ -101,7 +101,7 @@ function wpcf7gm_metabox( $post ) {
 
 	$roles = wpcf7gm_get_roles();
 	$settings = get_post_meta( $post->id, 'wpcf7gm', true );
-    if (empty( $settings['mode']) ) $settings['mode'] == 'normal';
+    if ( !isset ( $settings['mode']) ) $settings['mode'] == 'normal';
     ?>
     
     <div style="margin-bottom:6px;">
